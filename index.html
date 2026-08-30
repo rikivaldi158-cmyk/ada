@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Website Landing Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+ background: url("bg/2.png") center/cover no-repeat fixed;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+        }
+
+        /* CONTAINER UTAMA */
+        .container {
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        /* PANEL */
+        .panel {
+            position: relative;
+            padding: 55px 45px 40px;
+            border: 2px solid #555;
+            border-radius: 20px;
+             background: url("bg/2.png") center/cover no-repeat fixed;
+                0 0 0 7px #0b0b0b,
+                0 0 0 9px #444,
+                0 20px 60px rgba(0,0,0,.7);
+        }
+
+        /* LOGO / JUDUL */
+        .logo {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .logo h1 {
+            font-size: clamp(30px, 5vw, 58px);
+            font-weight: 900;
+            letter-spacing: 5px;
+            background: linear-gradient(
+                180deg,
+                #fff,
+                #d8d8d8,
+                #888
+            );
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 5px 15px rgba(0,0,0,.8);
+        }
+
+        .logo p {
+            margin-top: 8px;
+            font-size: 13px;
+            letter-spacing: 4px;
+            color: #aaa;
+        }
+
+        /* LOGIN DAFTAR */
+        .auth {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .auth button {
+            height: 72px;
+            border-radius: 40px;
+            border: 2px solid #888;
+            background: linear-gradient(
+                180deg,
+                #303030,
+                #111
+            );
+            color: white;
+            font-size: 25px;
+            font-weight: 900;
+            cursor: pointer;
+            transition: .25s;
+            box-shadow:
+                inset 0 2px 5px rgba(255,255,255,.15),
+                0 6px 15px rgba(0,0,0,.5);
+        }
+
+        .auth button:hover {
+            transform: translateY(-3px);
+            border-color: #fff;
+            box-shadow:
+                0 0 20px rgba(255,255,255,.15),
+                0 8px 20px rgba(0,0,0,.7);
+        }
+
+        /* MENU */
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .menu button {
+            min-height: 75px;
+            padding: 10px 8px;
+            border-radius: 16px;
+            border: 2px solid #666;
+            background: linear-gradient(
+                180deg,
+                #272727,
+                #0e0e0e
+            );
+            color: white;
+            font-size: 16px;
+            font-weight: 900;
+            cursor: pointer;
+            transition: .25s;
+            box-shadow:
+                inset 0 2px 5px rgba(255,255,255,.1),
+                0 5px 12px rgba(0,0,0,.6);
+        }
+
+        .menu button:hover {
+            transform: translateY(-5px);
+            border-color: #fff;
+            background: linear-gradient(
+                180deg,
+                #444,
+                #111
+            );
+        }
+
+        .menu button:active,
+        .auth button:active {
+            transform: scale(.97);
+        }
+
+        /* ICON */
+        .icon {
+            display: block;
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+
+        /* BANNER */
+        .banner {
+            margin-top: 35px;
+            padding: 28px 20px;
+            text-align: center;
+            border: 2px solid #777;
+            border-radius: 50px;
+            background:
+                linear-gradient(
+                    180deg,
+                    #292929,
+                    #090909
+                );
+            box-shadow:
+                inset 0 2px 8px rgba(255,255,255,.1),
+                0 10px 30px rgba(0,0,0,.6);
+        }
+
+        .banner h2 {
+            font-size: clamp(24px, 4vw, 48px);
+            font-weight: 1000;
+            letter-spacing: 2px;
+        }
+
+        .banner p {
+            margin-top: 8px;
+            color: #aaa;
+            font-size: 13px;
+            letter-spacing: 3px;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #666;
+            font-size: 12px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 800px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .panel {
+                padding: 35px 20px 25px;
+            }
+
+            .menu {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .menu button:last-child {
+                grid-column: span 2;
+            }
+
+            .auth button {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .auth {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .auth button {
+                height: 60px;
+            }
+
+            .menu {
+                gap: 10px;
+            }
+
+            .menu button {
+                min-height: 65px;
+                font-size: 13px;
+            }
+
+            .icon {
+                font-size: 21px;
+            }
+
+            .banner {
+                border-radius: 25px;
+                padding: 22px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="panel">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <h1>NAMA WEBSITE</h1>
+            <p>PLATFORM ONLINE TERPERCAYA</p>
+        </div>
+
+        <!-- LOGIN & DAFTAR -->
+        <div class="auth">
+
+            <button onclick="login()">
+                LOGIN
+            </button>
+
+            <button onclick="daftar()">
+                DAFTAR
+            </button>
+
+        </div>
+
+        <!-- MENU -->
+        <div class="menu">
+
+            <button onclick="openMenu('slot')">
+                <span class="icon">🎰</span>
+                SLOT
+            </button>
+
+            <button onclick="openMenu('togel')">
+                <span class="icon">🎯</span>
+                TOGEL
+            </button>
+
+            <button onclick="openMenu('poker')">
+                <span class="icon">🃏</span>
+                POKER
+            </button>
+
+            <button onclick="openMenu('casino')">
+                <span class="icon">🎲</span>
+                LIVE CASINO
+            </button>
+
+            <button onclick="openMenu('sports')">
+                <span class="icon">⚽</span>
+                SPORTSBOOK
+            </button>
+
+        </div>
+
+        <!-- BANNER -->
+        <div class="banner">
+            <h2>AMANAH DAN ANTI RUNGKAT</h2>
+            <p>PELAYANAN TERBAIK UNTUK ANDA</p>
+        </div>
+
+        <div class="footer">
+            © 2026 NAMA WEBSITE — ALL RIGHTS RESERVED
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    function login() {
+        alert("Halaman LOGIN");
+    }
+
+    function daftar() {
+        alert("Halaman DAFTAR");
+    }
+
+    function openMenu(menu) {
+        alert("Menu " + menu.toUpperCase());
+    }
+
+</script>
+
+</body>
+</html>
