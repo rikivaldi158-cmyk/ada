@@ -246,6 +246,74 @@
                 padding: 22px 10px;
             }
         }
+		
+		.auth-btn {
+    height: 72px;
+    border-radius: 40px;
+    border: 2px solid #888;
+    background: linear-gradient(
+        180deg,
+        #303030,
+        #111
+    );
+    color: red;
+    font-size: 25px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: .25s;
+    box-shadow:
+        inset 0 2px 5px rgba(255,255,255,.15),
+        0 6px 15px rgba(0,0,0,.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.auth-btn:hover {
+    transform: translateY(-3px);
+    border-color: #fff;
+    box-shadow:
+        0 0 20px rgba(255,255,255,.15),
+        0 8px 20px rgba(0,0,0,.7);
+}
+
+.auth-btn:active {
+    transform: scale(.97);
+}
+
+		.login-btn {
+    height: 72px;
+    border-radius: 40px;
+    border: 2px solid #888;
+    background: linear-gradient(180deg, #303030, #111);
+    color: red;
+    font-size: 25px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: .25s;
+    box-shadow:
+        inset 0 2px 5px rgba(255,255,255,.15),
+        0 6px 15px rgba(0,0,0,.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    transform: translateY(-3px);
+    border-color: #fff;
+}
+
+.login-btn:active {
+    transform: scale(.97);
+}
+
+		
+		
     </style>
 </head>
 
@@ -261,18 +329,21 @@
             <p>PLATFORM ONLINE TERPERCAYA</p>
         </div>
 
-        <!-- LOGIN & DAFTAR -->
-        <div class="auth">
+   <div class="auth">
 
-            <button onclick="login()">
-                LOGIN
-            </button>
+    <a href="https://minitotochef.com/" class="login-btn">
+        LOGIN
+    </a>
 
-            <button onclick="daftar()">
-                DAFTAR
-            </button>
+    <button type="button" onclick="daftar()">
+        DAFTAR
+    </button>
 
-        </div>
+</div>
+
+
+
+
 
         <!-- MENU -->
         <div class="menu">
@@ -320,11 +391,6 @@
 
 
 <script>
-
-    function login() {
-        alert("Halaman LOGIN");
-    }
-
     function daftar() {
         alert("Halaman DAFTAR");
     }
@@ -332,8 +398,10 @@
     function openMenu(menu) {
         alert("Menu " + menu.toUpperCase());
     }
-
 </script>
+
+
+
 
 </body>
 </html>
